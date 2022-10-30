@@ -1,0 +1,8 @@
+.Dropdown{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    width: 5rem;
+    transform:translate(+2rem,0);
+}
