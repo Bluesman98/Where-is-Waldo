@@ -34,17 +34,26 @@ async function getCities(db) {
   return cityList;
 }
 
-
-
-
 function App() {
 
   const [data,setData] = useState([])
+
   useEffect(()=>{  getCities(db).then((value) => {
     setData(value)
    });;},[])
 
-  
+   useEffect(()=>{  
+    if(!data.length) console.log('end')
+   },[data])
+
+   function removeFromList(name) {
+    setData(
+      data.filter(function (item) {
+        return item.name !== name;
+      })
+    );
+  }
+
   function handleClick(e){
     console.log("pageX: "+ e.pageX)
     console.log("pageY: "+ e.pageY)
@@ -55,10 +64,10 @@ function App() {
   }
   }
 
-  function calculate (pageX,pageY,targetX,targetY){
+  function targetValidation (targetX,targetY){
     let box = document.querySelector('.Box')
     if(box){
-      return Math.abs(pageX-targetX) <= box.clientWidth/1.5 && Math.abs(pageY-targetY) <= box.clientWidth/1.5
+      return Math.abs(x-targetX) <= box.clientWidth/1.5 && Math.abs(y-targetY) <= box.clientWidth/1.5
     }
 
   }
@@ -76,7 +85,7 @@ function App() {
 
       <img  src="https://cdna.artstation.com/p/assets/images/images/043/516/034/large/egor-klyuchnyk-color11.jpg?1637835295"></img>
         {visible && <Box x = {x} y = {y} ></Box>}
-        {visible && <Dropdown x = {x} y = {y} close={close} data={data} calculate={calculate}></Dropdown>}
+        {visible && <Dropdown x = {x} y = {y} close={close} data={data} targetValidation={targetValidation} removeFromList = {removeFromList}></Dropdown>}
      
     </div>
   );
