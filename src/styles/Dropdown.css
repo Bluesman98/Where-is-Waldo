@@ -9,7 +9,7 @@
 
 .target-valid{
     position: absolute;
-    border: .1rem solid green;
+    border: .15rem solid rgb(8, 110, 8);
     width: 3rem;
     height: 3rem;
     z-index: 1000;

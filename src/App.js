@@ -1,4 +1,5 @@
 import './App.css';
+import Stopwatch from './components/Stopwatch';
 import { useEffect, useState } from 'react';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
@@ -36,14 +37,15 @@ async function getCities(db) {
 
 function App() {
 
-  const [data,setData] = useState([])
+  const [data,setData] = useState([0])
+  const [stop,setStop] = useState(0)
 
   useEffect(()=>{  getCities(db).then((value) => {
     setData(value)
    });;},[])
 
    useEffect(()=>{  
-    if(!data.length) console.log('end')
+    if(!data.length) {setStop(1); console.log('stop')}
    },[data])
 
    function removeFromList(name) {
@@ -57,14 +59,13 @@ function App() {
   function handleClick(e){
     console.log("pageX: "+ e.pageX)
     console.log("pageY: "+ e.pageY)
-    if(e.target.tagName !== 'BUTTON'){
     setVisible(true)
     setY(e.pageY)
     setX(e.pageX)
   }
-  }
 
   function targetValidation (targetX,targetY){
+    console.log(targetX,targetY)
     let box = document.querySelector('.Box')
     if(box){
       return Math.abs(x-targetX) <= box.clientWidth/1.5 && Math.abs(y-targetY) <= box.clientWidth/1.5
@@ -81,12 +82,15 @@ function App() {
   }
 
   return (
-    <div className="App" onClick={handleClick}>
-
-      <img  src="https://cdna.artstation.com/p/assets/images/images/043/516/034/large/egor-klyuchnyk-color11.jpg?1637835295"></img>
+    <div className="App" >
+                <Stopwatch stop ={stop} ></Stopwatch>
+      
+      <div>
+        <img  onClick={handleClick} src="https://cdna.artstation.com/p/assets/images/images/043/516/034/large/egor-klyuchnyk-color11.jpg?1637835295"></img>
         {visible && <Box x = {x} y = {y} ></Box>}
-        {visible && <Dropdown x = {x} y = {y} close={close} data={data} targetValidation={targetValidation} removeFromList = {removeFromList}></Dropdown>}
-     
+          {visible && <Dropdown x = {x} y = {y} close={close} data={data} targetValidation={targetValidation} removeFromList = {removeFromList}></Dropdown>}
+      </div>
+ 
     </div>
   );
 }
