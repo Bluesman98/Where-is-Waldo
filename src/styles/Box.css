@@ -1,10 +1,10 @@
-.Box{
-    position: absolute;
-    border: .1rem solid white;
-    width: 3rem;
-    height: 3rem;
-    z-index: 1000;
-    transform:translate(-50%,-50%);
-    background-color: rgba(255, 255, 255, 0.266);
-    cursor:crosshair;
+.Box {
+  position: absolute;
+  border: 0.22em solid white;
+  width: 3rem;
+  height: 3rem;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.266);
+  cursor: crosshair;
 }

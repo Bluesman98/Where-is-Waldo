@@ -1,4 +1,9 @@
-.Stopwatch{
-    height: fit-content;
-    background-color: white;
+.Stopwatch {
+  height: fit-content;
+  color: white;
+  width: 20rem;
+}
+
+.Stopwatch > div {
+  font-size: 5rem !important;
 }

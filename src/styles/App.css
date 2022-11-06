@@ -1,0 +1,102 @@
+html,
+body,
+#root,
+.App {
+  height: 100%;
+  background-color: rgb(91, 91, 91);
+}
+
+img:hover {
+  cursor: crosshair;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: fit-content;
+  background-color: rgb(32, 32, 32);
+  padding: 0.5rem 1rem;
+  gap: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  z-index: 1000;
+  padding-left: 3rem;
+}
+
+.header > button {
+  font-size: 2rem;
+  border: none;
+  border-radius: 3px;
+  padding: 0.5rem;
+  color: black;
+  background-color: white;
+  font-weight: bold;
+  padding: 0.5rem 2rem;
+}
+.header > button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.home-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  background-color: rgb(32, 32, 32);
+  height: 8%;
+  padding: 0 2rem;
+  padding-left: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.home-header > div:first-child {
+  font-size: 1.8rem;
+}
+
+.home-header > div:last-child {
+  display: flex;
+  gap: 4rem;
+}
+
+.home-header > * a {
+  display: flex;
+  text-decoration: none;
+  color: white;
+}
+
+.home-header > * a:hover {
+  transform: scale(1.3);
+}
+
+.home-header > * button {
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 3px;
+  padding: 0.5rem;
+  color: black;
+  background-color: white;
+  font-weight: bold;
+}
+
+.home-header > * button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.Modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 3px;
+}
+
+.ReactModal__Overlay--after-open {
+  background-color: rgba(0, 0, 0, 0.475) !important;
+}

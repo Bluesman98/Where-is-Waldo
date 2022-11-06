@@ -1,0 +1,21 @@
+.MapSelection {
+  display: flex;
+  gap: 3%;
+  padding: 3%;
+}
+
+.MapSelection > div {
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.MapSelection > * img {
+  height: 30rem;
+  width: 20rem;
+}
+
+.MapSelection > * img:hover {
+  cursor: pointer;
+}

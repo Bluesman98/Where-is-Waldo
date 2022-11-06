@@ -1,0 +1,35 @@
+.Map {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(31, 31, 31);
+  padding: 0.5rem;
+  border-radius: 3px;
+}
+
+.Map:hover {
+  transform: scale(1.07);
+}
+
+.Map > .find {
+  color: white;
+  padding: 0.5rem;
+  font-size: 1.4rem;
+  align-self: start;
+}
+
+.Map > .Characters > * img {
+  height: 4rem;
+  width: 4rem;
+}
+
+.Map > .Characters {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  padding-bottom: 0;
+}
