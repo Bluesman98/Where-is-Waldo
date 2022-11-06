@@ -1,13 +1,19 @@
 {
   "files": {
     "main.css": "/Where-is-Waldo/static/css/main.2d86c093.css",
-    "main.js": "/Where-is-Waldo/static/js/main.5a396c59.js",
+    "main.js": "/Where-is-Waldo/static/js/main.c74d98e0.js",
+    "static/media/Samus.png": "/Where-is-Waldo/static/media/Samus.db5a6b4ce8c5f1d177c8.png",
+    "static/media/Cortana.png": "/Where-is-Waldo/static/media/Cortana.d1f9ee20ec4e17f2f54a.png",
+    "static/media/Predator.png": "/Where-is-Waldo/static/media/Predator.bec993c435cfcef8e3a8.png",
+    "static/media/Mumm-Ra.png": "/Where-is-Waldo/static/media/Mumm-Ra.cb882dcdab4b89ab293c.png",
+    "static/media/Batman.png": "/Where-is-Waldo/static/media/Batman.49dba349e0c825aaf507.png",
+    "static/media/Stubby.png": "/Where-is-Waldo/static/media/Stubby.d7494143376592e77c74.png",
     "index.html": "/Where-is-Waldo/index.html",
     "main.2d86c093.css.map": "/Where-is-Waldo/static/css/main.2d86c093.css.map",
-    "main.5a396c59.js.map": "/Where-is-Waldo/static/js/main.5a396c59.js.map"
+    "main.c74d98e0.js.map": "/Where-is-Waldo/static/js/main.c74d98e0.js.map"
   },
   "entrypoints": [
     "static/css/main.2d86c093.css",
-    "static/js/main.5a396c59.js"
+    "static/js/main.c74d98e0.js"
   ]
 }
