@@ -8,7 +8,7 @@ function Characters(props) {
         return (
           <div key={i}>
             <img
-              src={process.env.PUBLIC_URL + "images/" + item.name + ".png"}
+              src={"./images/"+ item.name + ".png"}
             ></img>
             <div>{item.name}</div>
           </div>
